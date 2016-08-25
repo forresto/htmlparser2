@@ -1,0 +1,54 @@
+{
+  "name": "Newline within pre tag",
+  "options": {
+    "handler": {},
+    "parser": {}
+  },
+  "html": "<pre><code>one\ntwo</code></pre>",
+  "expected": [
+    {
+      "event": "opentagname",
+      "data": [
+        "pre"
+      ]
+    },
+    {
+      "event": "opentag",
+      "data": [
+        "pre",
+        {}
+      ]
+    },
+    {
+      "event": "opentagname",
+      "data": [
+        "code"
+      ]
+    },
+    {
+      "event": "opentag",
+      "data": [
+        "code",
+        {}
+      ]
+    },
+    {
+      "event": "text",
+      "data": [
+        "one\ntwo"
+      ]
+    },
+    {
+      "event": "closetag",
+      "data": [
+        "code"
+      ]
+    },
+    {
+      "event": "closetag",
+      "data": [
+        "pre"
+      ]
+    }
+  ]
+}
